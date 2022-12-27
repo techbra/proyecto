@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Swal from 'sweetalert2';
+import { Button } from '@mui/material';
 
 function Edit({ employees, selectedEmployee, setEmployees, setIsEditing }) {
 
@@ -55,55 +56,54 @@ function Edit({ employees, selectedEmployee, setEmployees, setIsEditing }) {
         <div className="small-container">
             <form onSubmit={handleUpdate}>
                 <h1>Edit Employee</h1>
-                <label htmlFor="firstName">First Name</label>
+                <Button variant="outlined" color="secondary"> <label htmlFor="firstName">First Name</label>
                 <input
                     id="firstName"
                     type="text"
                     name="firstName"
                     value={firstName}
                     onChange={e => setFirstName(e.target.value)}
-                />
-                <label htmlFor="lastName">Last Name</label>
+                    /></Button>
+            
+            <Button variant="outlined" color="secondary"><label htmlFor="lastName">Last Name</label>
                 <input
                     id="lastName"
                     type="text"
                     name="lastName"
                     value={lastName}
                     onChange={e => setLastName(e.target.value)}
-                />
-                <label htmlFor="email">Email</label>
+                /></Button>
+                <Button variant="outlined" color="secondary"><label htmlFor="email">Email</label>
                 <input
                     id="email"
                     type="email"
                     name="email"
                     value={email}
                     onChange={e => setEmail(e.target.value)}
-                />
-                <label htmlFor="salary">Salary ($)</label>
+                /></Button>
+                <Button variant="outlined" color="secondary"><label htmlFor="salary">Salary ($)</label>
                 <input
                     id="salary"
                     type="number"
                     name="salary"
                     value={salary}
                     onChange={e => setSalary(e.target.value)}
-                />
-                <label htmlFor="date">Date</label>
+                /></Button>
+                <Button variant="outlined" color="secondary"><label htmlFor="date">Date</label>
                 <input
                     id="date"
                     type="date"
                     name="date"
                     value={date}
                     onChange={e => setDate(e.target.value)}
-                />
+                /></Button>
                 <div style={{ marginTop: '30px' }}>
-                    <input type="submit" value="Update" />
-                    <input
-                        style={{ marginLeft: '12px' }}
+                <Button variant="outlined" color="secondary"><input type="submit" value="Update" /></Button>
+                <Button variant="outlined" color="secondary"> <input 
                         className="muted-button"
                         type="button"
                         value="Cancel"
-                        onClick={() => setIsEditing(false)}
-                    />
+                        onClick={() => setIsEditing(false)} /></Button>
                 </div>
             </form>
         </div>

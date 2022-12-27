@@ -50,7 +50,7 @@ function List({ employees, handleEdit, handleDelete }) {
                               
                                 <td className="text-right">
                               
-                                    <Button variant="contained" color="secondary" size="small"
+                                <Button variant="outlined" color="secondary" size="small"
                                         onClick={() => handleEdit(employee.id)}
                                         className="button muted-button"
                                     >
@@ -58,7 +58,7 @@ function List({ employees, handleEdit, handleDelete }) {
                                     </Button>
                                 </td>
                                 <td className="text-left">
-                                    <Button variant="contained" color="secondary" size="small"
+                                <Button variant="outlined" color="secondary" size="small"
                                         onClick={() => handleDelete(employee.id)}
                                         className="button muted-button"
                                     >

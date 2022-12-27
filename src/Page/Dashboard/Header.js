@@ -5,7 +5,7 @@ import { Toolbar, AppBar, Typography, Button } from '@mui/material'
 function Header({ setIsAdding }) {
     return (
         <header>
-          <AppBar position="static" sx={{backgroundImage:" linear-gradient(90deg, rgba(180,58,151,1) 0%, rgba(29,203,253,1) 50%, rgba(252,179,69,1) 100%);"}}>
+          <AppBar position="static" sx={{backgroundImage:"  radial-gradient(circle, rgba(172,217,164,1) 0%, rgba(153,148,233,1) 100%);"}}>
         <Toolbar>
                 <Typography variant="h3" component="h2">
    Employee Management Software
@@ -14,7 +14,7 @@ function Header({ setIsAdding }) {
            </Toolbar>
             </AppBar>
             <div style={{ marginTop: '50px', marginBottom: '20px' }}>
-                <Button variant="contained" color="secondary" size="medium" onClick={() => setIsAdding(true)} className='round-button'>Add Button</Button>
+                <Button variant="outlined" color="secondary" size="medium" onClick={() => setIsAdding(true)} className='round-button'>Add </Button>
             </div>
           
         </header>
